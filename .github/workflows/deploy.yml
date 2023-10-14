@@ -3,15 +3,15 @@ name: build
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4.1.0
       - name: Use Node.js 18.18.1
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3.8.1
         with:
           node-version: "18.18.1"
       - name: Install yarn and run unittest
@@ -23,9 +23,9 @@ jobs:
       - name: Publish to Github Packages Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
-          name: my_github_username/my_repository_name/my_image_name
+          name: zkadish/create-react-app-github-actions/cra-docker-github
           registry: docker.pkg.github.com
-          username: ${{ secrets.GITHUB_USERNAME }}
+          username: ${{ secrets.USERNAME }}
           password: ${{ secrets.GITHUB_TOKEN }}
           dockerfile: Dockerfile-prod
           tags: latest
