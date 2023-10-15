@@ -21,7 +21,7 @@ jobs:
         env:
           CI: true
       - name: Publish to Github Packages Registry
-        uses: elgohr/Publish-Docker-Github-Action@4
+        uses: elgohr/Publish-Docker-Github-Action@v4
         with:
           name: zkadish/create-react-app-github-actions/
           registry: https://ghcr.io
