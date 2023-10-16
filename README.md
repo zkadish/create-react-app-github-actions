@@ -1,5 +1,9 @@
 ### Create React App git hub actions
 
+## Github setup
+
+- repository > settings > actions > general > workflow permissions > Read Write Permissions > save
+
 ## Build Dev image and then run it
 
 - $ docker build -t my-app:dev .
