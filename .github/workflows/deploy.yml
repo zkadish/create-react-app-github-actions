@@ -35,5 +35,5 @@ jobs:
           # registry: https://ghcr.io
           # username: ${{ secrets.USERNAME }}
           # password: ${{ secrets.GITHUB_TOKEN }}
-          # dockerfile: Dockerfile-prod
-          # tags: cra-test
+          dockerfile: Dockerfile-prod
+          tags: cra-test
