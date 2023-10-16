@@ -36,8 +36,9 @@ jobs:
     steps:
       - name: Deploy api to DigitalOcean Droplet
         uses: appleboy/ssh-action@v0.1.4
-        script: |
-          echo "testing..."
+        with:
+          script: |
+            echo "testing..."
     # - name: Deploy package to digitalocean
     #   uses: appleboy/ssh-action@master
     #   env:
