@@ -30,13 +30,20 @@ jobs:
           registry: ghcr.io
           dockerfile: Dockerfile-prod
           tags: cra-test
-  deploy-api-1:
+  deploy-cra-test:
     needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Deploy api to DigitalOcean Droplet
-        uses: appleboy/ssh-action@v0.1.4
+        uses: appleboy/ssh-action@v1.0.0
+        env:
+          GITHUB_USERNAME: ${{ secrets.USERNAME }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
+          host: ${{ secrets.CRA_HOST }}
+          username: root
+          key: ${{ secrets.DO_API_KEY }}
+          port: 22
           script: |
             echo "testing..."
     # - name: Deploy package to digitalocean
