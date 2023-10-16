@@ -32,7 +32,7 @@ jobs:
           tags: cra-test
   deploy-api-1:
     needs: build
-      runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       # Droplets already have docker, doctl + auth, and curl installed
       - name: Deploy api to DigitalOcean Droplet
