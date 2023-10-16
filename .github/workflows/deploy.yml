@@ -24,7 +24,7 @@ jobs:
         uses: elgohr/Publish-Docker-Github-Action@v5
         with:
           name: myDocker/repository
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: ${{ secrets.USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           # name: zkadish/create-react-app-github-actions/
           # registry: https://ghcr.io
