@@ -23,12 +23,12 @@ jobs:
       - name: Publish to Github Packages Registry
         uses: elgohr/Publish-Docker-Github-Action@v5
         with:
-          name: myDocker/repository
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
-          # name: zkadish/create-react-app-github-actions/
-          # registry: https://ghcr.io
+          # name: myDocker/repository
           # username: ${{ secrets.USERNAME }}
-          # password: ${{ secrets.GITHUB_TOKEN }}
-          # dockerfile: Dockerfile-prod
-          # tags: cra-test
+          # password: ${{ secrets.DOCKER_PASSWORD }}
+          name: zkadish/create-react-app-github-actions/
+          registry: https://ghcr.io
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          dockerfile: Dockerfile-prod
+          tags: cra-test
