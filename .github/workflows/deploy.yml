@@ -50,7 +50,7 @@ jobs:
             docker stop $(docker ps -a -q)
             docker login docker.pkg.github.com -u $GITHUB_USERNAME -p $GITHUB_TOKEN
             docker pull docker.pkg.github.com/zkadish/create-react-app-github-actions/cra-test-github:latest
-            docker run -d -p 0.0.0.0:80:80 docker.pkg.github.com/zkadish/create-react-app-github-actions/cra-test-github:latest
+            docker run -dit -p 3000:3000 docker.pkg.github.com/zkadish/create-react-app-github-actions/cra-test-github:latest
             # docker run -ti -p 80:80 docker.pkg.github.com/zkadish/create-react-app-github-actions/cra-test-github:latest
 
     # - name: Deploy package to digitalocean
