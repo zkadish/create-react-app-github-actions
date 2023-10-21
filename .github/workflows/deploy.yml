@@ -29,8 +29,8 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: ghcr.io
           dockerfile: Dockerfile-prod
-          tags: cra-test
-  deploy-cra-test:
+          tags: cra-github-actions
+  deploy-cra-github-actions:
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -48,10 +48,10 @@ jobs:
           script: |
             echo "testing..."
             docker stop $(docker ps -a -q)
+            docker rm $(docker ps -a -q)
             docker login docker.pkg.github.com -u $GITHUB_USERNAME -p $GITHUB_TOKEN
-            docker pull docker.pkg.github.com/zkadish/create-react-app-github-actions/cra-test-github:cra-test
-            docker run -dit -p 80:80 docker.pkg.github.com/zkadish/create-react-app-github-actions/cra-test-github:cra-test
-            # docker run -ti -p 80:80 docker.pkg.github.com/zkadish/create-react-app-github-actions/cra-test-github:latest
+            docker pull docker.pkg.github.com/zkadish/create-react-app-github-actions/cra-test-github:cra-github-actions
+            docker run -dit -p 80:80 docker.pkg.github.com/zkadish/create-react-app-github-actions/cra-test-github:cra-github-actions
 
     # - name: Deploy package to digitalocean
     #   uses: appleboy/ssh-action@master
