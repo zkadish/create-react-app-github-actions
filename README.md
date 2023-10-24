@@ -2,6 +2,11 @@
 
 ## create and setup a Digital Ocean droplet
 
+- create a secure droplet
+- https://blog.nodeswat.com/set-up-a-secure-node-js-web-application-9256b8790f11
+- create a user: appuser password: appuser* create a stronger password and add it to the repos git secrets
+- turn off root user, access droplet via appuser...
+
 ## log into the digital ocean droplet
 
 - ssh root@143.198.63.235 -i ~/.ssh/api-droplets
