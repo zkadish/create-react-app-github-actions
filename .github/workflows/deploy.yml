@@ -40,9 +40,9 @@ jobs:
           GITHUB_USERNAME: ${{ secrets.USERNAME }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          host: ${{ secrets.CRA_HOST }}
+          host: ${{ secrets.CRA_HOST }} # digitalocean ip address
           username: root
-          key: ${{ secrets.DO_API_KEY }}
+          key: ${{ secrets.DO_API_KEY }} # private ssh key of the droplet
           port: 22
           envs: GITHUB_USERNAME, GITHUB_TOKEN
           script: |
