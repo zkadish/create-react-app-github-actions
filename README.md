@@ -30,6 +30,12 @@
 
 ## Links used to create this project
 
+- use the following tutorial to connect github to digitalocean with ssh
+- https://medium.com/swlh/how-to-deploy-your-application-to-digital-ocean-using-github-actions-and-save-up-on-ci-cd-costs-74b7315facc2
+
+- use to install docker on droplet
+- https://blog.logrocket.com/zero-downtime-deploys-with-digitalocean-github-and-docker/
+
 - https://devpress.csdn.net/cicd/62ec1cc319c509286f416470.html#devmenu6
 - https://blog.logrocket.com/zero-downtime-deploys-with-digitalocean-github-and-docker/
 - https://medium.com/swlh/how-to-deploy-your-application-to-digital-ocean-using-github-actions-and-save-up-on-ci-cd-costs-74b7315facc2
