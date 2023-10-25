@@ -19,16 +19,19 @@
 
 - $ docker build -t my-app:dev .
 - $ docker run -it -p 4000:3000 my-app:dev
+- see container running at: localhost:4000
 
 ## Build Prod image and then run it
 
 - docker build -f Dockerfile-prod -t my-app:prod .
 - docker run -itd -p 81:80 --rm my-app:prod
 - docker run -it -p 81:80 --rm my-app:prod
+- see project running at: http://143.198.63.235:81/
 
 ## Links used to create this project
 
 - https://devpress.csdn.net/cicd/62ec1cc319c509286f416470.html#devmenu6
 - https://blog.logrocket.com/zero-downtime-deploys-with-digitalocean-github-and-docker/
 - https://medium.com/swlh/how-to-deploy-your-application-to-digital-ocean-using-github-actions-and-save-up-on-ci-cd-costs-74b7315facc2
+- https://blog.nodeswat.com/set-up-a-secure-node-js-web-application-9256b8790f11
   
