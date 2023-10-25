@@ -18,12 +18,13 @@
 ## Build Dev image and then run it
 
 - $ docker build -t my-app:dev .
-- $ docker run -it -p 3000:3000 my-app:dev
+- $ docker run -it -p 4000:3000 my-app:dev
 
 ## Build Prod image and then run it
 
 - docker build -f Dockerfile-prod -t my-app:prod .
-- docker run -itd -p 80:80 --rm my-app:prod
+- docker run -itd -p 81:80 --rm my-app:prod
+- docker run -it -p 81:80 --rm my-app:prod
 
 ## Links used to create this project
 

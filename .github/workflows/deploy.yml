@@ -51,7 +51,7 @@ jobs:
             docker rm $(docker ps -a -q)
             docker login docker.pkg.github.com -u $GITHUB_USERNAME -p $GITHUB_TOKEN
             docker pull docker.pkg.github.com/zkadish/create-react-app-github-actions/cra-test-github:cra-github-actions
-            docker run -dit -p 80:80 docker.pkg.github.com/zkadish/create-react-app-github-actions/cra-test-github:cra-github-actions
+            docker run -dit -p 81:80 docker.pkg.github.com/zkadish/create-react-app-github-actions/cra-test-github:cra-github-actions
 
     # - name: Deploy package to digitalocean
     #   uses: appleboy/ssh-action@master
