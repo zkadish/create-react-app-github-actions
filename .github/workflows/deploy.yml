@@ -35,6 +35,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4.1.0
       - name: Deploy api to DigitalOcean Droplet
         uses: appleboy/ssh-action@v1.0.0
         env:
