@@ -9,7 +9,7 @@
 
 ## log into the digital ocean droplet
 
-- ssh root@143.198.63.235 -i ~/.ssh/api-droplets
+- ssh root@164.92.95.88 -i ~/.ssh/api-droplets
 
 ## Github setup
 
@@ -19,14 +19,14 @@
 
 - $ docker build -t my-app:dev .
 - $ docker run -it -p 4000:3000 my-app:dev
-- see container running at: localhost:4000
+- see container running at: http://localhost:4000
 
 ## Build Prod image and then run it
 
 - docker build -f Dockerfile-prod -t my-app:prod .
-- docker run -itd -p 81:80 --rm my-app:prod
+- docker run -itd -p 81:80 --rm my-app:prod 
 - docker run -it -p 81:80 --rm my-app:prod
-- see project running at: http://143.198.63.235:81/
+- see project running at: http://164.92.95.88:81/
 
 ## Links used to create this project
 
